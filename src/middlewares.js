@@ -5,7 +5,7 @@ const log = (req, res, next) => {
 
 const checkSize = (req, res, next) => {
   if (req.params.param.length > 6) {
-    return res.status(403).send("403 (forbidden)");
+    return res.status(403).send("Parameter has more then 6 characters");
   }
   next();
 };
